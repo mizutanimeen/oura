@@ -1,3 +1,4 @@
+from cProfile import label
 import tkinter as tk
 import PIL.Image, PIL.ImageTk
 from tkcalendar import DateEntry
@@ -37,7 +38,7 @@ class App(tk.Tk):
     # 呪文
     def __init__(self, *args, **kwargs):
         # 呪文
-        tk.Tk.__init__(self, *args, **kwargs)
+        tkk = tk.Tk.__init__(self, *args, **kwargs)
         self.title("oura")
         self.geometry("1500x700")
         # ウィンドウのグリッドを 1x1 にする
@@ -55,6 +56,12 @@ class App(tk.Tk):
         #--------------------------------------------------------------------------
         self.lbl_home = tk.Label(self.main_frame, text="HOMEページ", font=('Helvetica', '20'))
         self.lbl_home.place(x=0,y=0)
+        #---------------------------終了ボタン-----------------------------------------------
+        menubar = tk.Menu(self)
+        self.config(menu=menubar)
+        menu_file = tk.Menu(self, tearoff = False) 
+        menubar.add_cascade(label='終了', menu=menu_file) 
+        menu_file.add_command(label='終了', command=lambda:exit()) 
         #region---------------------入力フォーム-----------------------------------------------------
         self.lbl1 = tk.Label(self.main_frame, text="要素をNaNにしたい場合は-1を記入")
         self.lbl1.place(x=0,y=50)
