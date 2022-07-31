@@ -1,6 +1,5 @@
 －－－－－－－－－－－－－－－－【main.pyの説明】－－－－－－－－－－－－－－－－
 【留意点】
-・セキュリティソフト（avastなど）うまく動作しないことがあります。（csv,xlsxなどに書き込みができなくなるなど）
 ・googledriveにexeファイルがあります。(exe版は現在ファイルの読み込み、書き込みに不具合)
 https://drive.google.com/drive/folders/19pLLKonQzDbHPXM84VXQzPUYRXiUnLVL?usp=sharing
 ・既にいくつかのデータが入っています。
